@@ -1,2 +1,2 @@
-# RMSeg-MDA
-Reference implementation about RMSeg-MDA
+# RMSeg-UDA
+Reference implementation about RMSeg-UDA
