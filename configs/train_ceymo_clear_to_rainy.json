@@ -1,0 +1,30 @@
+{
+    "category_csv": "data/csv/ceymo.csv",
+    "rcs_path": "data/mmseg_data/ceymo/clear/rcs.json",
+    "source_train_root": "data/mmseg_data/ceymo/clear/train",
+    "source_val_root": "data/mmseg_data/ceymo/clear/val",
+    "target_train_root": "data/mmseg_data/ceymo/rainy/train",
+    "target_val_root": "data/mmseg_data/ceymo/rainy/val",
+    "logdir": "logs/test",
+    "log_interval": 100,
+    "checkpoint_interval": 10000,
+    "max_iters": 80000,
+    "train_batch_size": 16,
+    "val_batch_size": 4,
+    "val_interval": 1000,
+    "seed": 0,
+    "num_workers": 16,
+    "pin_memory": true,
+    "ema_update_interval": [
+        4,
+        3,
+        2,
+        1
+    ],
+    "rcs_temperature": 0.5,
+    "rcs_ignore_ids": [
+        0
+    ],
+    "domain_loss_weight": 1.0,
+    "num_masks": 20
+}
