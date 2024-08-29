@@ -1,5 +1,3 @@
-import fire
-
 from rich import print
 from rich.progress import Progress
 
