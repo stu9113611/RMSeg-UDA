@@ -1,0 +1,16 @@
+{
+    "category_csv": "data/csv/ceymo.csv",
+    "datasets": [
+        ["clear", "data/datasets/ceymo/clear/val"],
+        ["night", "data/datasets/ceymo/night/val"],
+        ["rainy", "data/datasets/ceymo/rainy/val"]
+    ],
+    "logdir": "logs/ceymo/clear_to_mix",
+    "batch_size": 16,
+    "image_scale": [1080, 1920],
+    "crop_size": [512, 512],
+    "stride": [384, 384],
+    "seed": 0,
+    "num_workers": 16,
+    "pin_memory": true
+}

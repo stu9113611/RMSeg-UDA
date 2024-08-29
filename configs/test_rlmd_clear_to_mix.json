@@ -1,0 +1,16 @@
+{
+    "category_csv": "data/csv/rlmd.csv",
+    "datasets": [
+        ["clear", "data/datasets/rlmd_ac/clear/val"],
+        ["night", "data/datasets/rlmd_ac/night/val"],
+        ["rainy", "data/datasets/rlmd_ac/rainy/val"]
+    ],
+    "logdir": "logs/rlmd/clear_to_mix",
+    "batch_size": 16,
+    "image_scale": [1080, 1920],
+    "crop_size": [512, 512],
+    "stride": [384, 384],
+    "seed": 0,
+    "num_workers": 16,
+    "pin_memory": true
+}
