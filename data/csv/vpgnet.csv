@@ -1,0 +1,19 @@
+name,abbr,r,g,b
+background,BG,0,0,0
+lane solid white,LSW,237,28,36
+lane broken white,LBW,181,230,29
+lane double white,LDW,136,0,21
+lane solid yellow,LSY,163,73,164
+lane broken yellow,LBY,153,217,234
+lane double yellow,LDY,112,146,190
+lane broken blue,LBB,185,122,87
+lane slow,LS,255,153,173
+stop line,SL,61,72,204
+arrow left,AL,158,159,76
+arrow right,AR,41,64,96
+arrow go straight,AGS,121,138,134
+arrow u turn,AUT,7,102,146
+speed bump,SB,255,204,153
+cross walk,CW,34,117,76
+safety zone,SZ,255,242,0
+other road markings,ORM,175,157,185
