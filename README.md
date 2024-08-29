@@ -1,7 +1,7 @@
 # RMSeg-UDA: Unsupervised Domain Adpatation for Road Marking Segmentation under Adverse Conditions
 Reference implementation about RMSeg-UDA
 
-![image](https://github.com/stu9113611/RLMD-AC/blob/main/architecture.png)
+![image](https://github.com/stu9113611/RLMD-AC/blob/main/architecture.png)](https://github.com/stu9113611/RMSeg-UDA/blob/main/architecture.png)
 
 This repository contains the reference implementation for RMSeg-UDA, an UDA road marking segmentation training framework.
 
