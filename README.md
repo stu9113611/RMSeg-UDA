@@ -169,4 +169,4 @@ Second, visualize the features with t-SNE visualization.
 python -m tools.tsne_visualization
 ```
 
-The codes in save_features_for_tsne.py and tsne_visualization do not provide argparse feature, please check the exact code, it should be easy to read & be modified.
+The codes in [save_features_for_tsne.py](https://github.com/stu9113611/RMSeg-UDA/blob/main/tools/save_feature_for_tsne.py) and [tsne_visualization](https://github.com/stu9113611/RMSeg-UDA/blob/main/tools/tsne_visualization.py) do not provide argparse feature, please check the exact code, it should be easy to read & be modified.
