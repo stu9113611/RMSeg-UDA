@@ -115,6 +115,16 @@ or from a specific timing,
 python -m tools.train configs/train_rlmd_clear_to_rainy.json demo_experiment checkpoint_20000.pth
 ```
 ---
+To visualize the training progress, the framework support tensorboard functionality.
+```
+tensorboard --logdir <path/to/your/log>
+```
+For example,
+```
+tensorboard --logdir logs/rlmd/clear_to_rainy/demo_experiment
+```
+
+---
 To test the trained model, please choose one configuration, the log directory, and the checkpoint filename:
 ```
 python -m tools.test <path/to/your/config> <path/to/your/log> <checkpoint filename>
