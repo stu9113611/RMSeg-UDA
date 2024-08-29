@@ -9,8 +9,7 @@ This repository contains the reference implementation for RMSeg-UDA, an UDA road
 1. [Introduction](#introduction)
 2. [Environment](#environment)
 3. [Dataset](#dataset)
-4. [Training](#training)
-5. [Evaluation](#evaluation)
+4. [Execution](#execution)
 
 ## Introduction
 
@@ -79,9 +78,19 @@ RMSeg-UDA/
 ```
 This rule applies to other datasets, too.
 
-## Training
+## Execution
 
 Configuration files in JSON foramt are used in this framework. For practical examples, please check the [configs folder](https://github.com/stu9113611/RMSeg-UDA/tree/main/configs).
+
+---
+Before training, class statistics file for the clear training data should be generated.
+```
+python -m tools.count_categories <path/to/your/csv> <path/to/your/training_data_root> <path/to/your/rcs_savepath>
+```
+For example,
+```
+python -m tools.count_categories data/csv/rlmd.csv data/rlmd_ac/clear/train data/rlmd_ac/clear/rcs.json
+```
 
 ---
 To train the model, please choose one configuration (or make one yourself), give an experiment name as follow:
@@ -121,5 +130,43 @@ Additionally, you should prepare your own category csv file, which should follow
 ```
 python -m tools.convert_to_p_mode <path/to/your/category/csv> <path/to/your/labels> <path/to/your/output>
 ```
+---
+To inference data, we provide inferencing function for folder and video.
 
-## Evaluation
+To inference a folder of images:
+```
+python -m tools.inference_folder <path/to/your/category/csv> <path/to/your/images>\
+ <suffix> <path/to/your/output> <path/to/your/checkpoint> <height> <width> <use _sliding_inference>
+```
+For example,
+```
+python -m tools.inference_folder data/csv/rlmd.csv data/rlmd_ac/clear/val/images\
+ .jpg inference_output logs/rlmd/clear_to_rainy/demo_experiment/checkpoint_latest.pth 1080 1920 --sliding-window
+```
+
+To inference a video:
+```
+python -m tools.inference_video <path/to/your/category/csv> <path/to/your/video>\
+ <path/to/your/output> <path/to/your/checkpoint> <height> <width> <output_framerate> <use _sliding_inference>
+```
+For example,
+```
+python -m tools.inference_video data/csv/rlmd.csv a_video_footage.mp4\
+inference_output.mp4 logs/rlmd/clear_to_rainy/demo_experiment/checkpoint_latest.pth 1080 1920 30 --sliding-window
+```
+We only support to save mp4 output for now.
+
+---
+The framework also provides t-SNE visualization.
+
+First, generate and save the features to be visualized.
+```
+python -m tools.save_features_for_tsne
+```
+
+Second, visualize the features with t-SNE visualization.
+```
+python -m tools.tsne_visualization
+```
+
+The codes in save_features_for_tsne.py and tsne_visualization do not provide argparse feature, please check the exact code, it should be easy to read & be modified.
