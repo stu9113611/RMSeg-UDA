@@ -1,0 +1,13 @@
+name,abbr,r,g,b
+background,BG,0,0,0
+bus lane,BL,0,255,255
+cycle lane,CL,0,128,255
+diamond,DM,178,102,255
+junction box,JB,255,255,51
+left arrow,LA,255,102,178
+pedestrian crossing,PC,255,255,0
+right arrow,RA,255,0,127
+straight arrow,SA,255,0,255
+slow,SL,0,255,0
+straight-left arrow,SLA,255,128,0
+straight-right arrow,SRA,255,0,0
